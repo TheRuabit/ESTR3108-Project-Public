@@ -1,0 +1,39 @@
+[project]
+name = "goob-ai"
+version = "0.1.0"
+description = "Minimal LangGraph agent scaffolding"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Goob AI" }]
+dependencies = [
+  "langgraph>=0.2.33",
+  "langchain>=0.2.16",
+  "langchain-community>=0.2.16",
+  "requests>=2.32.0",
+  "openai>=1.51.0",
+  "gradio>=4.44.0",
+  "yt-dlp>=2024.5.27",
+  "pillow>=10.3.0",
+  "pandas>=2.2.2",
+  "tavily-python>=0.3.5",
+  "arxiv",
+  "wikipedia",
+  "pymupdf",
+  "ushlex",
+  "easyocr"
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+select = ["E", "F", "I", "D"]
+ignore = []
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+
